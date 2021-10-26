@@ -11,8 +11,8 @@ function getO() {
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            alert('Vui lòng ấn cho phép để xem chi tiết')
-            getO()
+            // alert('Vui lòng ấn cho phép để xem chi tiết')
+            // getO()
             break;
     }
 }
