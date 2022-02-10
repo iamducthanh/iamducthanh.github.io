@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tags {
+          display: inline;
+          position: relative;
+        }
+    
+        .tags:hover:after {
+          text-align: center;
+          background: #333;
+          background: rgba(0, 0, 0, .8);
+          border-radius: 5px;
+          bottom: -38px;
+          color: #fff;
+          /*content: attr(gloss);*/
+          content: attr(gloss);
+          white-space: pre;
+          left: 0%;
+          padding: 5px 15px;
+          position: absolute;
+          z-index: 98;
+          width: auto;
+        }
+    
+        .tags:hover:before {
+          border: solid;
+          border-color: #333 transparent;
+          border-width: 0 6px 6px 6px;
+          bottom: -4px;
+          content: "";
+          left: 45%;
+          position: absolute;
+          z-index: 99;
+        }
+      </style>
+</head>
+<body>
+    <br>
+    eeeeeeeeeeeeeeeeeeeeeeeeee<a class="seat tags"
+               gloss="thanh">qqqqqqq</a>
+</body>
+</html>
