@@ -1,0 +1,51 @@
+bước 1: ssh vào server với user và pass
+ssh root@103.18.7.212 -p1304
+bước 2: cài mariadb, maven, jdk
+sudo yum -y install MariaDB-server MariaDB-client
+sudo yum install maven
+sudo yum install java-11-openjdk-devel
+bước 3: kiểm tra version, trạng thái mariadb
+rpm -qi MariaDB-server
+sudo systemctl status mariadb
+bước 4: kiểm tra maven đã cài:
+mnv -v 
+bước 5: kiểm tra jdk 11 đẫ cài:
+java -version
+javac -version
+Lệnh khác liên quan:
+1/ ĐỔi version java, javac
+alternatives --config java
+alternatives --config javac
+2/ Xem danh sách các port đang mở:
+netstat -tupln
+
+Thông tin mapping port hiện tại:
+port 22 (SSH) -> port 1304 (public)
+port 3306 (MariaDB Server) -> port 1307 (public)
+
+Tài khoản MariaDB:
+id: root
+pass: Gmo@12345@prj120$
+
+Tham khảo link:
+Cài đặt:
+https://computingforgeeks.com/how-to-install-mariadb-on-centos/
+https://linuxize.com/post/how-to-install-apache-maven-on-centos-7/
+https://phoenixnap.com/kb/install-java-on-centos
+Reset password mariadb:
+https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password-on-ubuntu-20-04
+
+1/ Có thể config để mở database public; thao tác như link sau:
+https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/
+2/ Nhưng thông thường thì không nên làm vậy mà nếu cần dev thì cứ ssh vào server rồi dùng port forwarding như sau:
+Chạy lệnh sau để mở port DB từ server (3306) tới máy remote( port mở sẽ là 1307)
+ssh root@103.18.7.212 -p1304 -N -f -L 1307:localhost:3306
+Trên máy dev vào server thì chạy kết nối tới 
+Host: localhost và Port: 1307
+
+https://www.digitalocean.com/community/tutorials/how-to-change-a-mariadb-data-directory-to-a-new-location-on-centos-7
+
+ssh root@103.18.7.212 -p1304 -L 8888:localhost:3306
+-> nhập pass -> enter
+
+sudo kill $(sudo lsof -t -i:8080)
