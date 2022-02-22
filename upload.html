@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="form_upload mb-4">
+        <div class="drop">
+          <div class="cont">
+            <i class="fa fa-cloud-upload"></i>
+            <div class="tit">
+              Kéo thả file vào đây
+            </div>
+            <div class="desc">
+              hoặc
+            </div>
+            <div class="browse">
+              Chọn file từ máy tính
+            </div>
+          </div>
+          <output id="list"></output><input id="files" multiple="true" name="files[]" type="file" />
+        </div>
+      </div>
+
+      <script>
+
+        $(document).ready(function () {
+          $('.setting').click(function (e) {
+            e.stopPropagation();
+          });
+    
+          $('.hiddenRow').hide();
+    
+          $('.accordion-toggle').click(function (e) {
+            $(this).next('tr').toggle();
+            e.preventDefault();
+    
+          });
+          $('#scheduler_here').fullCalendar({
+            header: {
+              left: '',
+              center: 'title',
+              right: ''
+            },
+            defaultView: 'month',
+            editable: true,
+            allDaySlot: true,
+            selectable: true,
+            selectHelper: true,
+            selectOverlap: false,
+            fixedWeekCount: false,
+            showNonCurrentDates: false,
+            select: function (start, end) {
+              var title = "Available";
+              var evid = SaveEvent(start, end, '1');
+              $('#scheduler_here').fullCalendar('unselect');
+            },
+            eventClick: function (calEvent, jsEvent, view) {
+              var ev_id = calEvent.ID;
+              var st_dt = calEvent.start;
+              var ed_dt = calEvent.end;
+              infoEventShow('1', ev_id, st_dt, ed_dt);
+            },
+            slotMinutes: 15,
+            events: '/Aircrew/GetEvents/',
+            eventColor: '#339900'
+          });
+    
+        });
+    
+      </script>
+    
+      <script>
+    
+    
+        function handleFileSelect(evt) {
+          var files = evt.target.files; // FileList object
+    
+          // Loop through the FileList and render image files as thumbnails.
+          for (var i = 0, f; (f = files[i]); i++) {
+            // Only process image files.
+            if (!f.type.match("image.*")) {
+              continue;
+            }
+    
+            var reader = new FileReader();
+    
+            // Closure to capture the file information.
+            reader.onload = (function (theFile) {
+              return function (e) {
+                // Render thumbnail.
+                var span = document.createElement("span");
+                span.innerHTML = [
+                  '<img class="thumb" src="',
+                  e.target.result,
+                  '" title="',
+                  escape(theFile.name),
+                  '"/>'
+                ].join("");
+                document.getElementById("list").insertBefore(span, null);
+              };
+            })(f);
+    
+            // Read in the image file as a data URL.
+            reader.readAsDataURL(f);
+          }
+        }
+    
+        $("#files").change(handleFileSelect);
+    
+      </script>
+      <style>
+        .drop {
+          border-radius: 15px;
+          overflow: hidden;
+          text-align: center;
+          background: white;
+          margin: 0 auto;
+          position: relative;
+    
+        }
+    
+        .drop .cont {
+          width: 600px;
+          height: 170px;
+          padding: 30px;
+          border: 2px dashed #DADFE3;
+          color: #8E99A5;
+          -webkit-transition: all 0.5s ease-out;
+          -moz-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+          margin: auto;
+        }
+    
+        .drop .cont i {
+          font-size: 20px;
+          color: #8E99A5;
+          position: relative;
+        }
+    
+        .drop .cont .tit {
+          font-size: 20px;
+          text-transform: uppercase;
+        }
+    
+        .drop .cont .desc {
+          color: #A4AEBB;
+          font-size: 14px;
+        }
+    
+        .drop .cont .browse {
+          margin: 10px 25%;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 5px;
+          background: #09f;
+        }
+    
+        .drop input {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          background: red;
+          opacity: 0;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+    
+    
+        #list .thumb {
+          height: 75px;
+          border: 1px solid #323a44;
+          margin: 10px 5px 0 0;
+        }
+      </style>
+</body>
+</html>
