@@ -1,5 +1,5 @@
 bước 1: ssh vào server với user và pass
-ssh root@103.18.7.212 -p1304
+ssh root@123.45.6.789 -p1304
 bước 2: cài mariadb, maven, jdk
 sudo yum -y install MariaDB-server MariaDB-client
 sudo yum install maven
@@ -25,7 +25,7 @@ port 3306 (MariaDB Server) -> port 1307 (public)
 
 Tài khoản MariaDB:
 id: root
-pass: Gmo@12345@prj120$
+pass: #########
 
 Tham khảo link:
 Cài đặt:
@@ -39,7 +39,7 @@ https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mari
 https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/
 2/ Nhưng thông thường thì không nên làm vậy mà nếu cần dev thì cứ ssh vào server rồi dùng port forwarding như sau:
 Chạy lệnh sau để mở port DB từ server (3306) tới máy remote( port mở sẽ là 1307)
-ssh root@103.18.7.212 -p1304 -N -f -L 1307:localhost:3306
+ssh root@123.45.6.789 -p1304 -N -f -L 1307:localhost:3306
 Trên máy dev vào server thì chạy kết nối tới 
 Host: localhost và Port: 1307
 
