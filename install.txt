@@ -48,4 +48,5 @@ https://www.digitalocean.com/community/tutorials/how-to-change-a-mariadb-data-di
 ssh root@103.18.7.212 -p1304 -L 8888:localhost:3306
 -> nhập pass -> enter
 
+netstat -tulnp | grep
 sudo kill $(sudo lsof -t -i:8080)
