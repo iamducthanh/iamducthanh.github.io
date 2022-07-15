@@ -1,23 +1,28 @@
-pm.sendRequest({
-    url: 'https://ebanknewtest.seabank.com.vn/canhan2/api/authenticate',
-    method: 'POST',
-    header: 'Content-Type:application/json',
-    body: {
-        mode: 'raw',
-        raw: JSON.stringify(
-            {
-              "username": "1462152800",
-              "password": "1234Az",
-              "captcha": "",
-              "location": "10.9.9.9",
-              "context": "PC",
-              "channel": "SEANET/SEAMOBILE",
-              "subChannel": "SEANET/APPADR/APPIOS",
-              "uuid": "xxxxxyyyyyyyyyyzzzzzzzzzz"
-            }
-        )
-    }
-}, function (err, res) {
-    console.log(res);
-    pm.globals.set("token_auth", res.json().data.id_token);
-});
+let tokenAuthen = pm.globals.get("token_auth")
+if(tokenAuthen){
+    console.log('oke')
+} else {
+    pm.sendRequest({
+        url: 'https://ebanknewtest.seabank.com.vn/canhan2/api/authenticate',
+        method: 'POST',
+        header: 'Content-Type:application/json',
+        body: {
+            mode: 'raw',
+            raw: JSON.stringify(
+                {
+                  "username": "1462152800",
+                  "password": "1234Az",
+                  "captcha": "",
+                  "location": "10.9.9.9",
+                  "context": "PC",
+                  "channel": "SEANET/SEAMOBILE",
+                  "subChannel": "SEANET/APPADR/APPIOS",
+                  "uuid": "xxxxxyyyyyyyyyyzzzzzzzzzz"
+                }
+            )
+        }
+    }, function (err, res) {
+        console.log(res);
+        pm.globals.set("token_auth", res.json().data.id_token);
+    });
+}
