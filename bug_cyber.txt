@@ -1,0 +1,16 @@
+const _0x2ab4=['watchCounter','Thành\x20công','currentDate','type','onReward','dispatch','Design\x20by:\x20Sauanla.com','log'];(function(_0x3f99c9,_0x2ab440){const _0x56beec=function(_0x205fe6){while(--_0x205fe6){_0x3f99c9['push'](_0x3f99c9['shift']());}};_0x56beec(++_0x2ab440);}(_0x2ab4,0x16f));const _0x56be=function(_0x3f99c9,_0x2ab440){_0x3f99c9=_0x3f99c9-0x0;let _0x56beec=_0x2ab4[_0x3f99c9];return _0x56beec;};this[_0x56be('0x1')]=0x6;n=0x7a120;let t=0x1;while(t<=0x19){this[_0x56be('0x5')][_0x56be('0x6')]({'id':t,'type':this[_0x56be('0x4')],'ciao':n,'currentDate':this[_0x56be('0x3')],'watchCounter':this['watchCounter']});t++;}console[_0x56be('0x0')](_0x56be('0x2'));console[_0x56be('0x0')](_0x56be('0x7'));
+
+//no decode
+let z = 0;
+while(z<20){
+
+this.onReward.dispatch({
+                            id: t,
+                            type: this.type,
+                            coin: n,
+                            currentDate: this.currentDate,
+                            watchCounter: this.watchCounter
+                        })
+z++;
+console.log(z);
+}
