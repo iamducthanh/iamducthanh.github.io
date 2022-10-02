@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
 
     <!--- basic page needs
@@ -60,7 +61,6 @@
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
     </header>
     <!-- end s-header -->
     <section id="home" class="w3l-main-banner page-hero">
@@ -104,9 +104,9 @@
                                     <span>Scroll Down</span>
                                 </a>
                             </div>
-    
+
                 </div>
-    
+
             </div>
             <ul class="home-social">
                 <li>
@@ -131,11 +131,23 @@
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
-      </section>
+    </section>
 
     <section id="gioithieu" class='section'>
         <div class="container">
             <div class="head">
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="images/pre.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Hai mươi hai</figcaption>
+                        <audio id='audio' loop controls autoplay="true" class='audioControl audioFirst'>
+                            <source src="audio/haimuoihai.webm" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')" name="thanh"><img src="images/next.png" alt=""></div>
+                </div>
+
                 <div class="boxMusic" id='boxMusic'>
                     <div class="pre" onclick="nextpre('pre')"><img src="images/pre.png" alt=""></div>
                     <figure id="control_bar">
@@ -201,7 +213,7 @@
     ================================================== -->
     <!-- <section id="about" class="s-about target-section"> -->
 
-        <!-- <div class="row narrow section-intro has-bottom-sep">
+    <!-- <div class="row narrow section-intro has-bottom-sep">
             <div class="col-full text-center">
                 <h3>About</h3>
                 <h1>More About Me</h1>
@@ -211,7 +223,7 @@
             </div>
         </div> -->
 
-        <!-- <div class="row about-content">
+    <!-- <div class="row about-content">
 
             <div class="col-six tab-full left">
                 <h3>Howdy!</h3>
@@ -247,8 +259,8 @@
             </div>
 
         </div> -->
-        <!-- end about-content -->
-<!-- 
+    <!-- end about-content -->
+    <!-- 
         <div class="row about-content about-content--buttons">
 
             <div class="col-six tab-full left">
@@ -259,9 +271,9 @@
             </div>
 
         </div> -->
-        <!-- end about-content buttons -->
+    <!-- end about-content buttons -->
 
-        <!-- <div class="row about-content about-content--timeline">
+    <!-- <div class="row about-content about-content--timeline">
 
             <div class="col-full text-center">
                 <h3>My Work Experience.</h3>
@@ -905,7 +917,7 @@
             </div>
             <div class="col-four tab-full contact__infos">
                 <h4 class="h06">Phone</h4>
-                <p>Phone: 
+                <p>Phone:
                     <br> Mobile: 0000000000<br>
                 </p>
 
@@ -980,7 +992,8 @@
                 <div class="contact" id="contact1" style="left: 32px;">
                     <div class="phone"><img src="img/phone.png" alt=""><span>0000000000</span></div>
                     <div class="mail"><img src="img/gmailc.png" alt=""><span>ducthanh260801@gmail.com</span></div>
-                    <a style="background-color: transparent;" href="https://www.facebook.com/iamducthanh/" target="_blank">
+                    <a style="background-color: transparent;" href="https://www.facebook.com/iamducthanh/"
+                        target="_blank">
                         <div class="fb"><img src="img/fb.png" alt=""><span>Thành</span></div>
                     </a>
                     <a style="background-color: transparent;" href="https://www.instagram.com/" target="_blank">
@@ -990,7 +1003,7 @@
                 <div class="go-top">
                     <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up"
                             aria-hidden="true"></i></a>
-                            
+
                 </div>
             </div>
 
@@ -1063,23 +1076,23 @@
     </div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "105273818442643");
-      chatbox.setAttribute("attribution", "biz_inbox");
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v10.0'
-        });
-      };
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "105273818442643");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v10.0'
+            });
+        };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
@@ -1098,11 +1111,22 @@
 
 </script>
 <script src="js/js.js"></script>
+
 <script>
-    window.onload = function()
-{
-    getLocation();
-};
+
+        // document.getElementsByClassName('audioFirst')[0].play()
+    window.onload = function () {
+        getLocation();
+        document.getElementById('play').click();
+        document.getElementById('play').click();
+        document.getElementsByClassName('audioFirst')[0].play()
+        // document.getElementById('play').click();
+        // document.getElementById('play').click();
+        // document.getElementsByClassName('audioFirst')[0].play()
+        // document.getElementsByClassName('audioFirst')[0].play()
+
+        // setTimeout(document.getElementById('play').click(), 1000);
+    };
 </script>
 
 

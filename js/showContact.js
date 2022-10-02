@@ -5,8 +5,10 @@ window.onscroll = function () {
 
   
   function scrollFunction_ct() {
-    console.log(document.body.scrollTop);
-    console.log(document.documentElement.scrollTop);
+    document.getElementsByClassName('audioFirst')[0].play()
+
+    // console.log(document.body.scrollTop);
+    // console.log(document.documentElement.scrollTop);
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
       document.getElementById("contact1").style.left = "32px";
     //   document.getElementById("backgr").style.top = "0";
