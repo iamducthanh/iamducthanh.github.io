@@ -549,7 +549,7 @@ function audio() {
         document.getElementById("img").style.zIndex = "unset";
         document.getElementById("img").style.height = "360px";
         document.getElementById("img").style.width = "360px";
-        document.getElementById("imgin").style.height = "360px";
+        document.getElementById("imgind").style.height = "360px";
         document.getElementById("img").style.marginRight = "30px";
         document.getElementById("zIn").style.display = "unset";
         document.getElementById("boxMusic").style.bottom = "-8%";
@@ -572,7 +572,7 @@ function audio() {
         document.getElementById("img").style.zIndex = "11000";
         document.getElementById("img").style.height = "400px";
         document.getElementById("img").style.width = "400px";
-        document.getElementById("imgin").style.height = "400px";
+        document.getElementById("imgind").style.height = "400px";
         document.getElementById("img").style.marginRight = "0px";
         document.getElementById("zIn").style.display = "none";
         document.getElementById("boxMusic").style.bottom = "9%";
@@ -649,7 +649,7 @@ function loop(x) {
 
         document.getElementById("img").style.height = (avg + 240) * 1.5 + "px";
         document.getElementById("img").style.width = (avg + 240) * 1.5 + "px";
-        document.getElementById("imgin").style.height =
+        document.getElementById("imgind").style.height =
             (avg + 240) * 1.5 + 20 + "px";
         document.getElementById("img").style.boxShadow =
             "0px 0px 5px white, 0px 0px 20px white, 0px 0px " +

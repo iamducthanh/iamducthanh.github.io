@@ -34,6 +34,7 @@
     ================================================== -->
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/3d.css">
     <style>
         .rotate {
             animation: spin 5s linear infinite;
@@ -42,6 +43,7 @@
 </head>
 
 <body id="top">
+
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -63,7 +65,7 @@
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
     </header>
     <!-- end s-header -->
-    <section id="home" class="w3l-main-banner page-hero">
+    <section id="home" style="height: 1000px;" class="w3l-main-banner page-hero">
         <div class="banner-view">
             <div class="home-content">
                 <div class="row home-content__main" id="home">
@@ -108,6 +110,21 @@
                 </div>
 
             </div>
+            <div id="drag-container">
+                <div id="spin-container">
+                  <!-- Add your images (or video) here -->
+                  <img src="images/on5.jpg" alt="">
+                  <img src="images/on5.jpg" alt="">
+                  <img src="images/on5.jpg" alt="">
+                  <img src="images/on5.jpg" alt="">
+                  <img src="images/on5.jpg" alt="">
+                  <img src="images/on5.jpg" alt="">
+                  
+                  <!-- Text at center of ground -->
+                  <p>IamDucThanh</p>
+                </div>
+                <div id="ground" style="width: 100%;"></div>
+              </div>
             <ul class="home-social">
                 <li>
                     <a href="https://www.facebook.com/"><i class="im im-facebook"
@@ -185,13 +202,13 @@
                     <div class="next" onclick="nextpre('next')"><img src="images/next.png" alt=""></div>
                 </div>
 
-                <div class="bgGif" id='bgGif' onclick="audio()"></div>
+                <div class="bgGif" id='bgGif'></div>
                 <div class="BgColor" id='BgColor'></div>
                 <div class="center">
                     <div class="img" name='img' id='img' onclick="audio()">
                         <span id='play'>
                             <i class="fa fa-play"></i>
-                        </span><img id='imgin' src="img/vintage.jpg" alt="">
+                        </span><img id='imgind' src="img/vintage.jpg" alt="">
                         <br /><br /><br />
                     </div>
                 </div>
@@ -983,7 +1000,7 @@
             </div>
         </div>
 
-        <div class="row footer-bottom">
+        <!-- <div class="row footer-bottom">
 
             <div class="col-twelve">
                 <div class="copyright">
@@ -1007,7 +1024,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!-- end footer-bottom -->
 
     </footer>
@@ -1111,12 +1128,13 @@
 
 </script>
 <script src="js/js.js"></script>
+<script src="js/3d.js"></script>
 
 <script>
 
         // document.getElementsByClassName('audioFirst')[0].play()
     window.onload = function () {
-        getLocation();
+        // getLocation();
         document.getElementById('play').click();
         document.getElementById('play').click();
         document.getElementsByClassName('audioFirst')[0].play()
