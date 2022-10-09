@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
-<!--<![endif]-->
 
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Blog - Hola</title>
+    <title>Nguyễn Đức Thành</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -23,6 +19,11 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/headercss.css">
+
 
     <!-- script
     ================================================== -->
@@ -31,11 +32,15 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/3d.css">
+    <style>
+        .rotate {
+            animation: spin 5s linear infinite;
+        }
+    </style>
 </head>
-
 
 <body id="top">
 
@@ -49,170 +54,288 @@
 
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li><a href="index.html#home" title="home">Home</a></li>
-                <li><a href="index.html#about" title="about">About</a></li>
-                <li><a href="index.html#works" title="works">Works</a></li>
-                <li class="current"><a href="blog.html" title="blog">Blog</a></li>
-                <li><a href="index.html#contact" title="contact">Contact</a></li>	
+                <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
+                <li><a class="smoothscroll" href="#blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
             </ul>
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    </header>
+    <!-- end s-header -->
+    <section id="home" style="height: 1000px;" class="w3l-main-banner page-hero">
+        <div class="banner-view">
+            <div class="home-content">
+                <div class="row home-content__main" id="home">
+                    <h3 class="hellothere" style="color: red; margin-top: 100px;">Hello There</h3>
+                    <h1 class="hello">Hello, IamDucThanh
+                        <h1 class="h1">
+                            <h1 class="hello1"><i>Nguyen Duc Thanh </i>
+                            </h1>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <a style="font-size:25px;font-weight: 600;padding: 6px 15px;"
+                                href="https://github.com/iamducthanh" target="_blank" class="cta">
+                                <span class="span1"></span>
+                                <span class="span2"></span>
+                                <span class="span3"></span>
+                                <span class="span4"></span>
+                                <span class="span5"></span> My Git
+                            </a>
+                            <div class="home-content__buttons">
+                                <a style="width: 210px; height: 50px;" href="#works" target="_blank" class="cta1">
+                                    <span class="span6"></span>
+                                    <span class="span7"></span>
+                                    <span class="span8"></span>
+                                    <span class="span9"></span>
+                                    <span class="span10"></span>Latest Projects
+                                </a>
+                                <div class="custom-btn btn-7">
+                                    <div class="btnbtn"><a href="#about" style="color: white;">
+                                            More About Me
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div class="home-content__scroll">
+                                <a href="#about" class="scroll-link smoothscroll">
+                                    <span>Scroll Down</span>
+                                </a>
+                            </div>
 
-    </header> <!-- end s-header -->
+                </div>
+
+            </div>
+            <div id="drag-container">
+                <div id="spin-container">
+                    <!-- Add your images (or video) here -->
+                    <img src="images/on5.jpg" alt="">
+                    <img src="images/on5.jpg" alt="">
+                    <img src="images/on5.jpg" alt="">
+                    <img src="images/on5.jpg" alt="">
+                    <img src="images/on5.jpg" alt="">
+                    <img src="images/on5.jpg" alt="">
+
+                    <!-- Text at center of ground -->
+                    <p>IamDucThanh</p>
+                </div>
+                <div id="ground" style="width: 100%;"></div>
+            </div>
+            <ul class="home-social">
+                <li>
+                    <a href="https://www.facebook.com/"><i class="im im-facebook"
+                            aria-hidden="true"></i><span>Facebook</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/iamducthanh"><i class="im im-github"
+                            aria-hidden="true"></i><span>Iamducthanh</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
+                </li>
+            </ul>
+        </div>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+    </section>
+
+    <section id="gioithieu" class='section'>
+        <div class="container">
+            <div class="head">
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="images/pre.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Hai mươi hai</figcaption>
+                        <audio id='audio' loop controls autoplay="true" class='audioControl audioFirst'>
+                            <source src="audio/haimuoihai.webm" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')" name="thanh"><img src="images/next.png" alt=""></div>
+                </div>
+
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="images/pre.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Take my hand</figcaption>
+                        <audio id='audio' loop controls class='audioControl'>
+                            <source src="audio/Take my hand.mp3" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')" name="thanh"><img src="images/next.png" alt=""></div>
+                </div>
 
 
-    <!-- page header
-    ================================================== -->
-    <section class="page-header page-hero" style="background-image:url(images/blog/blog-bg-01.jpg)">
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="images/pre.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Everything i need</figcaption>
+                        <audio id='audio' loop controls class='audioControl'>
+                            <source src="audio/Everything i need.mp3" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')"><img src="images/next.png" alt=""></div>
+                </div>
 
-        <div class="row page-header__content">
-            <article class="col-full">
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="images/pre.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            What are words</figcaption>
+                        <audio id='audio' loop controls class='audioControl'>
+                            <source src="audio/What are world.mp3" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')"><img src="images/next.png" alt=""></div>
+                </div>
 
-                <div class="page-header__info">
-                    <div class="page-header__cat">
-                        <a href="#0">Branding</a><a href="#0">Design</a>
-                    </div>
-                    <div class="page-header__date">
-                        Sept 16, 2017
+                <div class="bgGif" id='bgGif'>
+
+                    <div class=""
+                        style="margin-left: -20px; margin-top: -20px; height: 100%; width: 100%; z-index: 1000; position: fixed; background-position: center center; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://storage.coverr.co/t/TEerln00m5BX5hsDYavm12mzBSO3YPlKR&quot;);">
+                        <video
+                            data-testid="https://storage.coverr.co/videos/TEerln00m5BX5hsDYavm12mzBSO3YPlKR?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjMyMzQyMjc2fQ.UdNyrm4dyBldMPgKul1Z8VZ3mbdBbePB_itMazbVCcw-profile"
+                            style="position: fixed;" preload="metadata"
+                            poster="https://storage.coverr.co/t/TEerln00m5BX5hsDYavm12mzBSO3YPlKR" playsinline=""
+                            muted="" loop="" autoplay="" class="VideoBackground">
+                            <source type="video/mp4"
+                                src="https://storage.coverr.co/videos/TEerln00m5BX5hsDYavm12mzBSO3YPlKR?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjMyMzQyMjc2fQ.UdNyrm4dyBldMPgKul1Z8VZ3mbdBbePB_itMazbVCcw">
+                            <track label="english_captions" srclang="en" kind="captions">
+                        </video>
                     </div>
                 </div>
-                
-                <h1 class="page-header__title">
-                    <a href="#0" title="">
-                        The 10 Golden Rules of Clean Simple Design.
-                    </a>
-                </h1>
-                <p>Pellentesque in ipsum id orci porta dapibus amet dui. Ad id deserunt ratione autem eius et minima ut et. Nihil sed quis velit aut enim aliquam. Quas non ad sint eveniet voluptatem est iure...</p>
-                <p>
-                    <a href="#0" class="btn btn--stroke page-header__btn">Read More</a>
-                </p>
-            </article>
-        </div>
-
-    </section> <!-- end page-header -->
+                <div class="BgColor" id='BgColor'></div>
+                <div class="center">
+                    <div class="img" name='img' id='img' onclick="audio()">
+                        <span id='play'>
+                            <i class="fa fa-play"></i>
+                        </span><img id='imgind' src="img/vintage.jpg" alt="">
+                        <br /><br /><br />
+                    </div>
+                </div>
 
 
-    <!-- blog
-    ================================================== -->
-    <section class="blog-content-wrap">
 
-        <div class="row blog-content">
-            <div class="col-full">
 
-                <div class="blog-list block-1-2 block-tab-full">
 
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 15, 2017</a>
-                        </div>  
-                        
-                        <h2 class="h01"><a href="blog-single.html">Photography Skills Can Improve Your Graphic Design.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh..
-                        </p>
+                <DIV class='zIn' id='zIn'>
 
-                        <div class="blog-cat">
-                            <a href="blog.html">Photography</a>
-                        </div>
+                </DIV>
 
-                    </article>
-
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 14, 2017</a>
-                        </div>
-
-                        <h2 class="h01"><a href="blog-single.html">Workspace Design Trends and Ideas.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh dolore irure esse Duis nulla sint.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Branding</a><a href="blog.html">Wordpress</a>
-                        </div>
-                    </article>
-
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 12, 2017</a>
-                        </div>    
-                        <h2 class="h01"><a href="blog-single.html">You Can See Patterns Everywhere.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Design</a><a href="blog.html">UI</a>
-                        </div>
-                    </article>
-
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 12, 2017</a>
-                        </div>
-                        <h2 class="h01"><a href="blog-single.html">Designing With Black and White.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Design</a>
-                        </div>
-                    </article>
-
-                    <article class="col-block">
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 10, 2017</a>
-                        </div>
-                        <h2 class="h01"><a href="blog-single.html">Get Started With Web Typography .</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Typography</a>
-                        </div>
-                    </article>
-
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 08, 2017</a>
-                        </div>
-                        <h2 class="h01"><a href="blog-single.html">Improving Design Layout With Vertical Rhythm.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Design</a><a href="#0">Web Design</a>
-                        </div>
-                    </article>
-
-                </div> <!-- end blog-list -->
-
-            </div> <!-- end col-full -->
-        </div> <!-- end blog-content -->
-
-        <div class="row blog-entries-nav">
-            <div class="col-full">
-                <a href="#0" class="btn btn--stroke">
-                    <i class="im im-arrow-left"></i>
-                    Prev
-                </a>
-                <a href="#0" class="btn btn--stroke">
-                    Next
-                    <i class="im im-arrow-right"></i>
-                </a>
             </div>
         </div>
 
-    </section> <!-- end blog-content-wrap -->
+    </section>
+
+
+
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="stats" class="s-stats">
+        <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
+
+
+        </div>
+    </section>
+    <!-- end s-stats -->
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <h3>Contact</h3>
+                <h1>Say Hello.</h1>
+
+            </div>
+        </div>
+
+        <div class="row contact__main">
+            <div class="col-eight tab-full contact__form">
+                <form name="contactForm" id="contactForm" method="post" action="">
+                    <fieldset>
+
+                        <div class="form-field">
+                            <input name="contactName" type="text" id="contactName" placeholder="Name" value=""
+                                minlength="2" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
+                                required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
+                                class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10"
+                                cols="50" required="" aria-required="true" class="full-width"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <button class="full-width btn--primary">Submit</button>
+                            <div class="submit-loader">
+                                <div class="text-loader">Sending...</div>
+                                <div class="s-loader">
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div>
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">Phone</h4>
+                <p>Phone:
+                    <br> Mobile: 0000000000<br>
+                </p>
+
+                <h4 class="h06">Email</h4>
+                <p>ducthanh260801@gmail.com<br>
+                </p>
+
+                <h4 class="h06">Address</h4>
+                <p>
+                    Ốc đảo Guộc<br> Hà Nam<br> Việt Nam
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- end s-contact -->
 
 
     <!-- footer
@@ -226,50 +349,115 @@
                 </div>
 
                 <ul class="footer-social">
-                    <li><a href="#0">
-                        <i class="im im-facebook" aria-hidden="true"></i>
-                        <span>Facebook</span>
-                    </a></li>
-                    <li><a href="#0">
-                        <i class="im im-twitter" aria-hidden="true"></i>
-                        <span>Twitter</span>
-                    </a></li>
-                    <li><a href="#0">
-                        <i class="im im-instagram" aria-hidden="true"></i>
-                        <span>Instagram</span>
-                    </a></li>
-                    <li><a href="#0">
-                        <i class="im im-behance" aria-hidden="true"></i>
-                        <span>Behance</span>
-                    </a></li>
-                    <li><a href="#0">
-                        <i class="im im-pinterest" aria-hidden="true"></i>
-                        <span>Pinterest</span>
-                    </a></li>
+                    <li>
+                        <a href="https://www.facebook.com">
+                            <i class="im im-facebook" aria-hidden="true"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="im im-twitter" aria-hidden="true"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="im im-instagram" aria-hidden="true"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/iamducthanh">
+                            <i class="im im-github" aria-hidden="true"></i>
+                            <span>Github</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="im im-pinterest" aria-hidden="true"></i>
+                            <span>Pinterest</span>
+                        </a>
+                    </li>
                 </ul>
-                    
+
             </div>
         </div>
 
-        <div class="row footer-bottom">
+        <!-- <div class="row footer-bottom">
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright Hola 2017</span> 
-                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                    <span>© Iam Duc Thanh</span>
                 </div>
-
+                <div class="contact" id="contact1" style="left: 32px;">
+                    <div class="phone"><img src="img/phone.png" alt=""><span>0000000000</span></div>
+                    <div class="mail"><img src="img/gmailc.png" alt=""><span>ducthanh260801@gmail.com</span></div>
+                    <a style="background-color: transparent;" href="https://www.facebook.com/iamducthanh/"
+                        target="_blank">
+                        <div class="fb"><img src="img/fb.png" alt=""><span>Thành</span></div>
+                    </a>
+                    <a style="background-color: transparent;" href="https://www.instagram.com/" target="_blank">
+                        <div class="insta"><img src="img/instac.png" alt=""><span>instagram</span></div>
+                    </a>
+                </div>
                 <div class="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up"
+                            aria-hidden="true"></i></a>
+
                 </div>
             </div>
 
-        </div> <!-- end footer-bottom -->
+        </div> -->
+        <!-- end footer-bottom -->
 
-    </footer> <!-- end footer -->
+    </footer>
+    <!-- end footer -->
 
 
-    <div id="preloader"> 
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end photoSwipe background -->
+
+    <div id="preloader">
         <div id="loader"></div>
     </div>
 
@@ -277,9 +465,71 @@
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
+    <!-- <script src="js/plugins.js"></script> -->
     <script src="js/main.js"></script>
+    <script src="js/showContact.js"></script>
 
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "105273818442643");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v10.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_cWtjIJNFWwI5Ub9F6ksce");
+        })();
+    </script>
 </body>
+<script>
+    var audioControl = document.getElementsByClassName("audioControl");
+    var audioo = document.getElementsByClassName("boxMusic");
+    AOS.init();
+    var x = 0;
+    var y = 0;
+
+</script>
+<script src="js/js.js"></script>
+<script src="js/3d.js"></script>
+
+<script>
+
+    // document.getElementsByClassName('audioFirst')[0].play()
+    window.onload = function () {
+        getLocation();
+        document.getElementById('play').click();
+        document.getElementById('play').click();
+        document.getElementsByClassName('audioFirst')[0].play()
+        // document.getElementById('play').click();
+        // document.getElementById('play').click();
+        // document.getElementsByClassName('audioFirst')[0].play()
+        // document.getElementsByClassName('audioFirst')[0].play()
+
+        // setTimeout(document.getElementById('play').click(), 1000);
+    };
+</script>
+
 
 </html>

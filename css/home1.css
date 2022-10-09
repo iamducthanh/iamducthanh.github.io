@@ -1,0 +1,30 @@
+.block {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    font-family: Aldrich, sans-serif;
+    text-transform: none;
+    box-shadow: none;
+    font-size: 15px;
+    min-height: 65px;
+    margin: 16px 0px;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    text-decoration: none;
+}
+.icon-block{
+    width: 55px;
+    min-width: 55px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.text-block{
+    padding-right: 55px;
+    width: 100%;
+    min-width: 0px;
+    text-align: center  ;
+}
